@@ -1,0 +1,31 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Post-It</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="post-it.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+  <script src="post-it.js" charset="utf-8"></script>
+</head>
+
+<body x-data="{ postitState: false }" x-on:click="newPostIt($refs, $event)">
+
+  <div class="addpostit"><input x-ref="state" type="checkbox" id="postitState" ><label for="postitState">Ajouter des post-it</label></div>
+  <input type="radio" id="tout" name="categorie"/>
+  <label for="tout" id="all">Tout</label>
+  <input type="radio" id="basic" name="categorie" />
+  <label for="basic" id="itemone">Basique</label>
+  <input type="radio" id="important" name="categorie"/>
+  <label for="important" id="itemtwo">Important</label>
+  <input type="radio" id="essentiel" name="categorie"/>
+  <label for="essentiel" id="itemthree">Essentiel</label>
+  <div id="map">
+  </div>
+
+</body>
+</html>

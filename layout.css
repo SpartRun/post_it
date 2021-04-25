@@ -1,0 +1,133 @@
+@font-face {
+    font-family: "Redacted";
+    src: url("redacted-font/fonts/web/redacted-script-regular.eot");
+    src: url("redacted-font/fonts/web/redacted-script-regular.woff2") format("woff2"),
+         url("redacted-font/fonts/web/redacted-script-regular.woff") format("woff"),
+         url("redacted-font/fonts/web/redacted-script-regular.otf") format("opentype"),
+         url("redacted-font/fonts/web/redacted-script-regular.svg#filename") format("svg");
+}
+
+html{
+  font-size: 20px;
+}
+body{
+  max-width: 1600px;
+  min-width: 340px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Verdana;
+}
+*{
+  border-radius: 5px;
+}
+h1, main article h3{
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+h2{
+  font-size: 1.75rem;
+  margin-bottom: 1em;
+}
+h3{
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+h4{
+  font-size: 1.25rem;
+  margin-bottom: 1em;
+}
+p{
+  margin-bottom: 1em;
+}
+span{
+  color: grey;
+  font-size: .85rem;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+img{
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+a{
+  color: grey;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+ul:not(:last-child){
+  margin-bottom: 20px;
+}
+header, footer{
+  background-color: lightgrey;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+main, aside{
+  margin-bottom: 20px;
+}
+aside article{
+  margin-bottom: 20px;
+}
+
+article{
+  border: 5px solid lightgrey;
+  padding: 20px;
+  padding-bottom: 0;
+}
+article:after{
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* layout */
+ body{
+   display: flex;
+   flex-wrap: wrap;
+   text-align: justify;
+   word-break: break-all;
+ }
+ header, footer{
+  flex-basis: 100%;
+ }
+main{
+  flex-basis: calc(100% / 3 * 2 - 10px);
+  flex-grow: 1;
+}
+
+@media (min-width: 900px) {
+  aside{
+    margin-left: 20px;
+  }
+}
+@media (max-width: 700px){
+  main img{
+    width: 100%;
+  }
+}
+aside{
+  flex-basis: calc(100% / 3 - 10px);
+  min-width: 300px;
+  flex-grow: 1;
+}
+@media (min-width: 800px){
+  header nav ul{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  header nav ul li{
+    flex-grow: 1
+  }
+}
+footer nav{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+footer ul{
+  flex-grow: 1;
+  min-width: 300px;
+}

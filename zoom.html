@@ -1,0 +1,69 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Post-It</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Kavivanar&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="post-it.css">
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+  <script src="post-it.js" charset="utf-8"></script>
+</head>
+<body x-data="{ postitState: false }" x-on:click="newPostIt($refs, $event)">
+  <input x-ref="state" type="checkbox" id="postitState" ><label for="postitState">Ajouter des post-it</label>
+  <header>
+    <a href="index.html">
+      <h1>Post-It !</h1>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <article id="zone1">
+      <img src="https://placehold.it/1900x1200" alt="">
+    </article>
+  </main>
+
+  <footer>
+    <nav>
+      <ul>
+        <h4>Menu 1</h4>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+      </ul>
+
+      <ul>
+        <h4>Menu 2</h4>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+      </ul>
+
+      <ul>
+        <h4>Menu 3</h4>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+</body>
+</html>
